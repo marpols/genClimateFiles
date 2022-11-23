@@ -6,7 +6,7 @@ parent_dir <- "C:/Users/PolsinelliM/OneDrive - AGR-AGR/Documents/McGill/BREE 533
 setwd(parent_dir)
 
 #weather station name list
-stn_list <- ("Ste-Anne")
+stn_list <- c("Ste-Anne")
 
 #year range
 yrs <- c(2018,2021)
