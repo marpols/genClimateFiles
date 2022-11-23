@@ -22,14 +22,14 @@ createClimFile = function(stn,years){
   #creates complete climate file for each weather station
   wd <- paste(parent_dir,stn,sep="")
   setwd(wd)
-  fnm <- paste(stn,"_climatefile.csv")
+  fnm <- paste(stn,"_climatefile.csv",sep="")
   first <- T
   
   for (y in years){
     cur_dlyyr <- read.csv(file = paste(wd,"/",y,"/",stn,"_",y,"_ECCC.csv",sep=""),header=TRUE, sep=",") %>% select(5,6,7,8,10,12,24)
     if (first){
       first <- F
-      write.csv(cur_dlyyr,file = fnm)
+      write.csv(cur_dlyyr,file = fnm, row.names=F)
     }else{
       write.table(cur_dlyyr,file= fnm, append = T, col.names = F, row.names = F, sep=",")
     }
@@ -89,7 +89,7 @@ yrs <- seq(yrs[1],yrs[2])
 for (s in stn_names){
   #create climate file for each station
   createClimFile(s,yrs)
-  fnm <- paste(s,"_climatefile.csv")
+  fnm <- paste(s,"_climatefile.csv",sep="")
   climFile <- read.csv(file=fnm)
   for (v in cols){
     #generate daily averages for each selected hourly parameter

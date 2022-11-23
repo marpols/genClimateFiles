@@ -13,7 +13,7 @@ yrs <- c(2018,2021)
 
 
 #----------------------------------Funtions-------------------------------------
-read_climateFile <- function(stn)
+read_climateFile <- function(stn){
   #read climateFile for weather station
   weather_fp <- paste(getwd(), "/", stn,"/",stn,"_","climatefile.csv", sep="")
   weather_dat <- read.csv(weather_fp)
@@ -51,6 +51,6 @@ for(s in stn_list){
   
   climateFile$SolarRadiation <- NPfile$ALLSKY_SFC_SW_DWN #add solar radiation data
   
-  write.csv(get_missing(climateFile,NPfile,c(6,7,8),c(9,10,11)), file = paste(s,"_climComp.csv"))
+  write.csv(get_missing(climateFile,NPfile,c(5,6,7),c(9,10,11)), file = paste(s,"_climComp.csv",sep=""), row.names = F)
   
 }
