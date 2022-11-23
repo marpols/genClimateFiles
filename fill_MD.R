@@ -9,7 +9,8 @@ setwd(parent_dir)
 stn_list <- c("Ste-Anne")
 
 #year range
-yrs <- c(2018,2021)
+#assumes ECCC weather data and NasaPower data are in the same range
+#yrs <- c(2017,2021)
 
 
 #----------------------------------Funtions-------------------------------------

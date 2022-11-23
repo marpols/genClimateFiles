@@ -33,7 +33,7 @@ time_period <- "daily"
 
 #select date range of data to download (start and end date as "yyyy-mm-dd")
 #as.character(Sys.Date()) = current date
-date_ranges <- c("2018-01-01","2021-12-31")
+date_ranges <- c("2017-01-01","2021-12-31")
 
 #---CODE BEGINS---------------------------------------------------------------------------
 

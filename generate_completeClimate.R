@@ -9,7 +9,7 @@ stn_names <- c("Ste-Anne")
 parent_dir <- "C:/Users/PolsinelliM/OneDrive - AGR-AGR/Documents/McGill/BREE 533/Project/RZWQM/"
 
 #years to examine
-yrs <- c(2018,2021)
+yrs <- c(2017,2021)
 
 #Edit columns of data from weather data table to calculate averages for
 #14 - RH, 20 - wind speed
